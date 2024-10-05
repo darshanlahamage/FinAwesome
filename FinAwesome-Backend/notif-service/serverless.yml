@@ -1,0 +1,22 @@
+service: notif-service
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+      - sns:Publish
+      - sns:Subscribe
+      Resource:
+      - !Sub 'your-arn:finnotify'
+
+functions:
+  api:
+    handler: notif_service.handler
+    events:
+      - httpApi: '*'
+plugins:
+  - serverless-offline
