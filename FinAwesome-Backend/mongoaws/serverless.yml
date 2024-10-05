@@ -49,7 +49,7 @@ populate and sendNotify scheduled lambda func with eventbridge
 #     LambdaPermissionInvokeFromLex:
 #       Type: AWS::Lambda::Permission
 #       Properties:
-#         FunctionName: arn:aws:lambda:ap-south-1:975050103500:function:mongoaws-dev-lexBot
+#         FunctionName: arn:aws:lambda:ap-south-******:function:mongoaws-dev-lexBot
 #         Action: lambda:InvokeFunction
 #         Principal: lexv2.amazonaws.com
 
